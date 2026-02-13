@@ -1,4 +1,4 @@
-#Developer Portfolio
+##Developer Portfolio
 
 ## Overview
 This is a futuristic, terminal-themed developer portfolio built with HTML, CSS (Bootstrap Grid), and Vanilla JavaScript. It features a "Cyberpunk Terminal Hybrid" aesthetic with neon colors, glitch effects, and interactive elements.
