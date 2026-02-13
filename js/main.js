@@ -177,11 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 progressBars.forEach(bar => {
-                    const targetWidth = bar.getAttribute('style').match(/width:\s*(\d+%)/)[1];
-                    bar.style.width = '0%'; // Reset to 0 force reflow if needed, but css transition handles it
-                    setTimeout(() => {
-                        bar.style.width = targetWidth;
-                    }, 100);
+                    const targetWidth = bar.dataset.width;
+                    bar.style.width = targetWidth;
                 });
                 skillObserver.unobserve(entry.target);
             }
