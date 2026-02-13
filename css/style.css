@@ -27,6 +27,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @media (min-width: 992px) {
     .mb-4 {
         padding-right: 5rem;
@@ -301,6 +305,26 @@ button,
     background: transparent;
     transition: all 0.3s;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    /* For ripple effect */
+}
+
+/* Button Ripple Effect Styles */
+.ripple {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
 }
 
 .btn-terminal:hover {
@@ -393,6 +417,12 @@ button,
 /* Skills */
 .skill-item {
     margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateX(10px);
+    /* Hover effect on skill cards */
 }
 
 .skill-label {
@@ -405,6 +435,7 @@ button,
     height: 20px;
     background: #333;
     border: 1px solid var(--text-main);
+    overflow: hidden;
 }
 
 .light-mode .progress-bar {
@@ -419,7 +450,12 @@ button,
     /* Blocks style */
     background-image: linear-gradient(90deg, transparent 50%, rgba(0, 0, 0, 1) 50%);
     background-size: 10px 100%;
+    width: 0;
+    /* Start at 0 for animation */
+    transition: width 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
+
+
 
 .light-mode .progress-bar .fill {
     background: var(--accent);

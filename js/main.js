@@ -146,4 +146,49 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500);
         }
     });
+
+    // --- Ripple Effect ---
+    document.querySelectorAll('.btn-terminal, .btn-resume').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            const circle = document.createElement('span');
+            const diameter = Math.max(btn.clientWidth, btn.clientHeight);
+            const radius = diameter / 2;
+
+            circle.style.width = circle.style.height = `${diameter}px`;
+            circle.style.left = `${e.clientX - (btn.getBoundingClientRect().left + window.scrollX)}px`;
+            circle.style.top = `${e.clientY - (btn.getBoundingClientRect().top + window.scrollY)}px`;
+            circle.classList.add('ripple');
+
+            const ripple = btn.getElementsByClassName('ripple')[0];
+
+            if (ripple) {
+                ripple.remove();
+            }
+
+            btn.appendChild(circle);
+        });
+    });
+
+    // --- Skill Bar Animation ---
+    const skillSection = document.querySelector('#about');
+    const progressBars = document.querySelectorAll('.progress-bar .fill');
+
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                progressBars.forEach(bar => {
+                    const targetWidth = bar.getAttribute('style').match(/width:\s*(\d+%)/)[1];
+                    bar.style.width = '0%'; // Reset to 0 force reflow if needed, but css transition handles it
+                    setTimeout(() => {
+                        bar.style.width = targetWidth;
+                    }, 100);
+                });
+                skillObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    if (skillSection) {
+        skillObserver.observe(skillSection);
+    }
 });
