@@ -1,4 +1,4 @@
-# Cyberpunk Developer Portfolio
+#Developer Portfolio
 
 ## Overview
 This is a futuristic, terminal-themed developer portfolio built with HTML, CSS (Bootstrap Grid), and Vanilla JavaScript. It features a "Cyberpunk Terminal Hybrid" aesthetic with neon colors, glitch effects, and interactive elements.
@@ -16,14 +16,6 @@ This is a futuristic, terminal-themed developer portfolio built with HTML, CSS (
 1. Unzip the folder (if zipped).
 2. Open `index.html` in any modern web browser.
 3. No server required!
-
-## Customization
-- **Personal Details**: Edit `index.html` -> `#about` section.
-- **Projects**: Edit `index.html` -> `#projects` section.
-- **Images**: Place your images in `images/` folder and update `src` attributes in `index.html`.
-    - Profile: `images/profile.jpg`
-    - Project 1: `images/project1.jpg`
-    - Project 2: `images/project2.jpg`
 
 ## Technologies
 - HTML5
