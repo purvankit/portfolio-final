@@ -581,6 +581,14 @@ button,
     align-items: flex-start;
 }
 
+@media (max-width: 768px) {
+    .social-links {
+        align-items: center;
+        /* Center align on mobile */
+    }
+}
+
+
 .social-icons-row {
     display: flex;
     gap: 1.5rem;
@@ -641,5 +649,30 @@ button,
     .hero-section {
         padding-top: 60px;
         /* Offset fixed nav */
+    }
+
+    /* Mobile Contact Button Sizing */
+    .btn-terminal {
+        width: 100%;
+        /* Make transmit button full width */
+        background-color: #00FFFF;
+        /* Solid Cyan */
+        color: #000000;
+        /* Black text for contrast */
+        border: none;
+        text-align: center;
+    }
+
+    .mobile-resume {
+        width: 100%;
+        /* Ensure resume button matches transmit width */
+    }
+
+    /* Mobile Menu Links Contrast (Dark Mode Only) */
+    body:not(.light-mode) .mobile-menu a {
+        color: #e0e0e0;
+        /* Off-white for better contrast against black/blue */
+        text-shadow: none;
+        /* Optional: remove glow if it hurts readability */
     }
 }
