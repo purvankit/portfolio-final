@@ -43,7 +43,7 @@ portfolio/
 ## Setup & Usage
 1. **Clone/Download** the repository.
 2. Open `index.html` in any modern web browser (Chrome, Edge, Firefox, Safari).
-3. No build step or backend server required—it runs entirely client-side.
+3. No build step or backend server required.
 
 ## Technologies
 - **Frontend**: HTML5, CSS3 (Custom Properties), JavaScript (ES6+).
