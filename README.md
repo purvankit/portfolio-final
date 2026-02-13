@@ -1,4 +1,4 @@
-# Purvankit Khadatkar | Cyberpunk Developer Portfolio
+# Developer Portfolio
 
 ## Overview
 A futuristic, terminal-themed developer portfolio built with semantic **HTML5**, modern **CSS3**, **Bootstrap 5 (Grid)**, and **Vanilla JavaScript**. The design features a "Cyberpunk Terminal Hybrid" aesthetic with neon colors, glitch effects, interactive terminal windows, and a dark/light mode toggle.
@@ -50,11 +50,6 @@ portfolio/
 - **Layout**: Bootstrap 5 Grid System + CSS Flexbox.
 - **Fonts**: 'IBM Plex Mono' (Google Fonts).
 - **Icons**: SVG Icons (Custom).
-
-## Customization
-- **Personal Details**: Edit the `#about` section in `index.html`.
-- **Projects**: Update the `.project-window` blocks in `#projects`.
-- **Resume**: Replace `Resume/Resume_purvankit.pdf` with your own file.
 
 ---
 &copy; 2026 Purvankit Khadatkar. System Online.
